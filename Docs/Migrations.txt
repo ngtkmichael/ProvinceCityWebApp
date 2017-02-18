@@ -1,0 +1,11 @@
+﻿===================================================================================
+=================================== ApplicationDbConext ===========================
+===================================================================================
+
+Models : Identity, City & Province
+==================================
+Enable-Migrations -ContextTypeName ApplicationDbContext -MigrationsDirectory Migrations\Identity
+
+add-migration -ConfigurationTypeName ProvinceCityWebApp.Migrations.Identity.Configuration "InitialIdentity"
+
+update-database -ConfigurationTypeName ProvinceCityWebApp.Migrations.Identity.Configuration
